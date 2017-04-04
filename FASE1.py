@@ -31,7 +31,13 @@ def batalha(vidaoponente,poderoponente,defesaoponente,vidajogador,poderjogador,d
         if vidajogador <= 0:
             return print("Você perdeu!")
 
-    
+ #INSPERDEX
+insperdex = []
+#mostrando o INSPERDEX  (ESTA COM ERRO, SO PRINTA O PRIMEIRO)     
+def mostra_insperdex():
+    print("A sua Insperdex tem o(s) senguinte(s) Inspermons: ")
+    for i in range(len(insperdex)):
+        mostra_ipmon(insperdex[i])   
 #ESCOLHANDO UM INSPERMON PARA O JOGADOR!!!
 
 pokestatus = inspermons[0]
@@ -39,9 +45,12 @@ print("Seu pokemon é o {0}!".format(pokestatus["nome"]))
 vidajogador = pokestatus["vida"]
 poderjogador = pokestatus["poder"]
 defesajogador = pokestatus["defesa"]
-    #rodando o jogo
+
+
+
+#rodando o jogo
 while True:
-    pergunta = str(input("Você deseja passear ou dormir? "))
+    pergunta = str(input("Você deseja passear ou dormir ou acessar Insperdex? "))
     perguntalower = pergunta.lower()
     
     #DORMIR
@@ -49,13 +58,53 @@ while True:
         break
     #LUTAR
     if perguntalower == "passear":
+        print("Você encontrou um Inspermon!!!")
         #ESCOLHANDO UM INSPERMON ALEATORIAMENTE PARA BATALHA!!!
         aleatoriomons = random.choice(inspermons)
-        aleatoriostatus = aleatoriomons
-        vidaoponente = aleatoriostatus["vida"]
-        poderoponente = aleatoriostatus["poder"]
-        defesaoponente = aleatoriostatus["defesa"]
-        print("O Pokemon que você irá batalhar é o {0}!".format(aleatoriomons["nome"]))  
-        #BATALHA!!!!!!!!!!
-        batalha (vidaoponente,poderoponente,defesaoponente,vidajogador,poderjogador,defesajogador)
+        #ADICIONAR O INSPERMON AO INSPERDEX!
+        insperdex.append(aleatoriomons)
+        #BATALHAR OU NÃO BATALHAR, EIS A QUESTÃO
+        
+        fugir = str(input("Você deseja batalhar com {0}?" .format(aleatoriomons["nome"])))
+        fugirlower = fugir.lower()
+        #VOLTANDO A BATALHA
+        if fugirlower == "sim":
+            aleatoriostatus = aleatoriomons
+            vidaoponente = aleatoriostatus["vida"]
+            poderoponente = aleatoriostatus["poder"]
+            defesaoponente = aleatoriostatus["defesa"]
+            #BATALHA!!!!!!!!!!
+            batalha (vidaoponente,poderoponente,defesaoponente,vidajogador,poderjogador,defesajogador)
+            
+        if fugirlower == "não":
+            continue
+        if fugirlower == "nao":
+            continue
+    #INSPERDEX
+    if perguntalower == "insperdex":
+        mostra_insperdex()
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
