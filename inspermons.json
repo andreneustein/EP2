@@ -2,19 +2,65 @@
 	{
 		"nome" : "picaxu",
 		"poder" : 20,
-		"vida" : 200,
-		"defesa" : 12
+		"vida" : 50,
+		"defesa" : 12,
+           "xp":0,
+           "tipo":"terra"
 	},
 	{
 		"nome" : "xamando",
-		"poder" : 25,
-		"vida" : 100,
-		"defesa" : 10
+		"poder" : 15,
+		"vida" : 40,
+		"defesa" : 10,
+           "xp":0, 
+           "tipo":"fogo"
 	},
 	{
 		"nome" : "pidijet",
 		"poder" : 15,
-		"vida" : 300,
-		"defesa" : 10
-	}
+		"vida" : 40,
+		"defesa" : 10,
+           "xp":0,
+           "tipo":"ar"
+	},
+     {
+           "nome" : "bubassalto",
+           "poder" : 18,
+           "vida" : 45,
+           "defesa" : 12,
+           "xp" : 0,
+           "tipo":"terra"
+      },
+      {
+           "nome" : "exquartoow",
+           "poder" : 15,
+           "vida" : 48,
+           "defesa" : 15,
+           "xp" : 0,
+           "tipo":"agua"
+       },
+       {
+           "nome" : "fabiomon",
+           "poder" : 20,
+           "vida" : 40,
+           "defesa" : 15,
+           "xp" : 0,
+           "tipo":"agua"
+        },
+        {
+           "nome" : "droganaite",
+           "poder" : 18,
+           "vida" : 35,
+           "defesa" : 12,
+           "xp" : 0,
+           "tipo":"fogo"
+         },
+         {
+           "nome" : "gabdre",
+           "poder" : 15,
+           "vida" : 40,
+           "defesa" : 12,
+           "xp" : 0,
+           "tipo":"ar"
+          }
 ]
