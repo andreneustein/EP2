@@ -10,4 +10,5 @@ def critical():
     lista = [1,1,1,1,1,1,2,3]
     critical1 = random.choice(lista)
     return critical1
-print (critical)
+
+critical()
